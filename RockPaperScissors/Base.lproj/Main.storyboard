@@ -17,7 +17,7 @@
                         <viewControllerLayoutGuide type="top" id="HUJ-al-Ubx"/>
                         <viewControllerLayoutGuide type="bottom" id="fqQ-nG-h6S"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uZk-oR-UzU">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="RockPaperScissorsViewController" id="uZk-oR-UzU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -162,8 +162,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-bx-Tz9">
+                                <rect key="frame" x="20" y="813" width="374" height="49"/>
+                                <items>
+                                    <barButtonItem title="OK" id="iYI-zD-7R5">
+                                        <connections>
+                                            <action selector="dismess:" destination="JZ7-wY-shP" id="NbK-Zk-Acb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0O4-YW-del">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="44" width="374" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyID" textLabel="yPA-QT-GqK" detailTextLabel="QyD-ZK-vx4" style="IBUITableViewCellStyleValue1" id="Zub-ec-K42">
@@ -199,9 +209,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NOe-sr-ClJ" firstAttribute="top" secondItem="5lO-bx-Tz9" secondAttribute="bottom" id="DW8-ic-ipd"/>
                             <constraint firstItem="0O4-YW-del" firstAttribute="top" secondItem="bud-lr-yZI" secondAttribute="bottom" id="GmD-Bn-ik9"/>
-                            <constraint firstItem="NOe-sr-ClJ" firstAttribute="top" secondItem="0O4-YW-del" secondAttribute="bottom" id="PFP-cq-Sbd"/>
                             <constraint firstItem="0O4-YW-del" firstAttribute="leading" secondItem="pb1-pN-afx" secondAttribute="leadingMargin" id="Pdb-9p-Tcs"/>
+                            <constraint firstItem="0O4-YW-del" firstAttribute="bottom" secondItem="5lO-bx-Tz9" secondAttribute="top" id="VsG-HL-lph"/>
+                            <constraint firstItem="5lO-bx-Tz9" firstAttribute="leading" secondItem="pb1-pN-afx" secondAttribute="leadingMargin" id="iu0-Ka-AIV"/>
+                            <constraint firstItem="5lO-bx-Tz9" firstAttribute="trailing" secondItem="pb1-pN-afx" secondAttribute="trailingMargin" id="jof-MA-tlI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0O4-YW-del" secondAttribute="trailing" id="koK-DV-rzJ"/>
                         </constraints>
                     </view>

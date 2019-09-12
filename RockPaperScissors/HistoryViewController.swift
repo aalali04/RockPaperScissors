@@ -13,6 +13,7 @@ import UIKit
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     
     // MARK: Properties
     
@@ -33,6 +34,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
 
+    @IBAction func dismess(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // MARK: Image for Match
     
