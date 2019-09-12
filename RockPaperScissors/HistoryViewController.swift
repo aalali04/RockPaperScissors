@@ -24,7 +24,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "historyID")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "historyID", for: indexPath)
         let match = self.history[(indexPath as NSIndexPath).row]
         cell.textLabel!.text = matchresult(match)
         cell.detailTextLabel!.text = "\(match.p1) vs. \(match.p2)"

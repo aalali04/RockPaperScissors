@@ -191,6 +191,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JZ7-wY-shP" id="BtG-fr-DW0"/>
+                                    <outlet property="delegate" destination="JZ7-wY-shP" id="Xf3-6R-nDn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
