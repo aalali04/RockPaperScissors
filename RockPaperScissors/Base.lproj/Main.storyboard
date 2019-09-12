@@ -29,7 +29,6 @@
                                 </state>
                                 <connections>
                                     <action selector="makeYourMove:" destination="iYZ-Mq-4iF" eventType="touchUpInside" id="LHW-e4-IL1"/>
-                                    <segue destination="7l5-Gp-aIR" kind="modal" identifier="throwDownScissors" id="Ih9-HG-qHO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgh-U1-uLB">
@@ -58,6 +57,14 @@
                                     <action selector="makeYourMove:" destination="iYZ-Mq-4iF" eventType="touchUpInside" id="fGy-X8-GSq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKx-sP-jlp" userLabel="History">
+                                <rect key="frame" x="182" y="70" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="showHistory:" destination="iYZ-Mq-4iF" eventType="touchUpInside" id="nWu-jo-E9Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -76,7 +83,6 @@
                         <outlet property="paperButton" destination="Ay7-rG-oQ3" id="W20-lL-iti"/>
                         <outlet property="rockButton" destination="2pQ-vK-SEv" id="dpm-25-xrO"/>
                         <outlet property="scissorsButton" destination="kDr-vO-WkA" id="3bC-0b-DYi"/>
-                        <segue destination="7l5-Gp-aIR" kind="modal" identifier="throwDownPaper" id="VKf-O8-YvW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AH7-9D-0G1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,23 +150,23 @@
             </objects>
             <point key="canvasLocation" x="1172.4637681159422" y="94.419642857142847"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Ab2-kg-wPr">
+        <!--History View Controller-->
+        <scene sceneID="7D8-R8-kG3">
             <objects>
-                <viewController id="x0w-iM-1Ei" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="JZ7-wY-shP" customClass="HistoryViewController" customModule="RockPaperScissors" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0cD-VU-h2c"/>
-                        <viewControllerLayoutGuide type="bottom" id="D2M-PZ-Riw"/>
+                        <viewControllerLayoutGuide type="top" id="bud-lr-yZI"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOe-sr-ClJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FFJ-zB-3l3" customClass="HistoryViewController">
+                    <view key="view" contentMode="scaleToFill" id="pb1-pN-afx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qc4-HD-7vN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqK-Lj-kat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912" y="94"/>
+            <point key="canvasLocation" x="1868" y="94"/>
         </scene>
     </scenes>
     <resources>
@@ -169,7 +175,4 @@
         <image name="rock-paper-scissors1" width="460" height="276"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Ih9-HG-qHO"/>
-    </inferredMetricsTieBreakers>
 </document>

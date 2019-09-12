@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import UIKit
+
+// MARK: - HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return history.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+    // MARK: Properties
+    
+    var history: [RPSMatch]!
+    
+
+}
